@@ -1,0 +1,13 @@
+.ehali-highlight{box-shadow:inset 3px 0 0 var(--ehali-color)!important}
+.ehali-badge{display:inline-flex;align-items:center;vertical-align:middle;margin:0 5px 2px 0;padding:2px 7px;border:1px solid color-mix(in srgb,var(--ehali-badge-color) 25%,transparent);border-radius:5px;background:color-mix(in srgb,var(--ehali-badge-color) 12%,transparent);color:var(--ehali-badge-color);font:600 10px/1.5 Arial,sans-serif;white-space:nowrap;cursor:pointer;user-select:none}
+.ehali-badge:hover,.ehali-badge:focus-visible{background:color-mix(in srgb,var(--ehali-badge-color) 22%,transparent);outline:2px solid color-mix(in srgb,var(--ehali-badge-color) 35%,transparent);outline-offset:1px}
+.ehali-filter-hidden{display:none!important}
+.ehali-filter-bar{position:relative;z-index:2;display:flex;flex-direction:column;gap:7px;margin:8px 0;padding:10px 12px;border:1px solid #dadce0;border-radius:9px;background:#fff;color:#202124;font:12px/1.4 Arial,sans-serif;box-shadow:0 1px 3px rgba(60,64,67,.12)}
+.ehali-filter-bar[hidden]{display:none!important}
+.ehali-filter-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ehali-filter-heading strong{font-size:12px;font-weight:700}
+.ehali-filter-count{color:#5f6368;font-size:11px}
+.ehali-filter-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ehali-filter-chip{padding:4px 9px;border:1px solid color-mix(in srgb,var(--ehali-badge-color) 35%,#dadce0);border-radius:999px;background:color-mix(in srgb,var(--ehali-badge-color) 9%,white);color:var(--ehali-badge-color);font:600 11px/1.35 Arial,sans-serif;cursor:pointer}
+.ehali-filter-chip:hover,.ehali-filter-chip.is-active{background:color-mix(in srgb,var(--ehali-badge-color) 19%,white);border-color:var(--ehali-badge-color)}
+.ehali-filter-chip.is-active{box-shadow:inset 0 0 0 1px var(--ehali-badge-color)}

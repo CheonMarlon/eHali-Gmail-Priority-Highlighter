@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17152f">
+  <title>eHali</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="icons/logo.svg" width="34" height="34" alt="">
+        <div><h1>eHali</h1><p>Make important mail stand out.</p></div>
+      </div>
+      <div class="master-control">
+        <span id="masterLabel">Enabled</span>
+        <button id="master" class="switch" type="button" role="switch" aria-checked="true" aria-label="Enable eHali highlighting"><span></span></button>
+      </div>
+    </header>
+
+    <section class="tester panel">
+      <div class="section-title"><div><span class="eyebrow">MATCH PREVIEW</span><h2>Try a subject line</h2></div><span class="spark">✳</span></div>
+      <input id="try" class="field" type="text" autocomplete="off" placeholder="e.g. Interview invitation for IT Intern">
+      <div id="tryOut" class="try-out" aria-live="polite">Type a subject to preview matching labels.</div>
+    </section>
+
+    <section class="rules-section">
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR ORGANIZATION</span><h2>Labels <span id="ruleCount" class="count"></span></h2></div>
+        <button id="add" class="button primary" type="button">＋ Add label</button>
+      </div>
+      <ul id="rules" class="rule-list"></ul>
+      <div id="empty" class="empty" hidden><strong>No labels yet</strong><span>Create a label and add the words or senders it should recognize.</span></div>
+    </section>
+
+    <section class="panel fallback-panel">
+      <div class="fallback-head">
+        <div><span class="eyebrow">OPTIONAL</span><h2>Unmatched emails</h2><p>Give emails with no matching rule a quiet label.</p></div>
+        <button id="fallbackSwitch" class="switch" type="button" role="switch" aria-checked="false" aria-label="Enable unmatched email label"><span></span></button>
+      </div>
+      <div id="fallbackEditor" class="fallback-editor" hidden>
+        <label class="field-label" for="fallbackName">Label name</label>
+        <input id="fallbackName" class="field" maxlength="32" value="Other">
+        <label class="field-label" for="fallbackColor">Label color</label>
+        <input id="fallbackColor" class="color-field" type="color" value="#6B7280">
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-actions">
+        <button id="export" class="button subtle" type="button">Export settings</button>
+        <button id="import" class="button subtle" type="button">Import settings</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden>
+        <button id="reset" class="button text-danger" type="button">Reset</button>
+      </div>
+      <div class="footer-meta"><span id="saved" role="status">Stored on this device</span><span>eHali v1.0.0</span></div>
+    </footer>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </main>
+  <script src="defaults.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
