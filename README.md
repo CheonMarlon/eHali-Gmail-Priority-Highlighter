@@ -95,8 +95,7 @@ eHali/
 │   ├── icon48.png
 │   └── icon128.png
 ├── README.md
-├── PRIVACY.md
-└── CHANGELOG.md
+└── PRIVACY.md
 ```
 
 ## Troubleshooting
